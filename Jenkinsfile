@@ -79,7 +79,7 @@ pipeline {
 
         text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
 
-        booleanParam(name: 'TOGGLE', defaultValue: false, description: 'Toggle this value')
+        booleanParam(name: 'DEPLOY', defaultValue: false, description: 'Toggle this value')
 
         choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
 
@@ -112,6 +112,9 @@ pipeline {
         }
         //third stage
         stage('Deploy') {
+                 when {
+                    expression { ${DEPLOY} = true}
+            }
                      input {
                     message "Should we continue?"
                     ok "Yes, we should."
