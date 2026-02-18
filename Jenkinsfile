@@ -23,19 +23,31 @@ pipeline {
         //first stage
         stage('Build') {
             steps {
-                echo "Building"
+                script {
+                    sh """
+                    echo "Building"
+                    """
+                }
             }
         }
         //second stage
         stage('Test') {
             steps {
-                echo "Testing"
+                script {
+                sh  """
+                    echo "Building"
+                    """
+                }
             }
         }
         //third stage
         stage('Deploy') {
             steps {
-                echo "Deploying"
+                script {
+                    sh """
+                    echo "Building"
+                    """
+                }
             }
         }
     }
