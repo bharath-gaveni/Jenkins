@@ -39,7 +39,9 @@ pipeline {
             }
         }
         post {
-            always 'I will run irrespective of if pipeline is success or failure'
+            always {
+                'I will run irrespective of if pipeline is success or failure'
+            }
         }
     }
 
