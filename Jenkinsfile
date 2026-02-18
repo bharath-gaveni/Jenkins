@@ -116,7 +116,6 @@ pipeline {
                     sh """
                     echo "Building"
                     echo role: ${ROLE}
-                    sleep 10
                      echo "Hello ${params.PERSON}"
 
                     echo "Biography: ${params.BIOGRAPHY}"
@@ -126,6 +125,8 @@ pipeline {
                     echo "Choice: ${params.CHOICE}"
 
                     echo "Password: ${params.PASSWORD}"
+
+                    sleep 10
                     """
                 }
             }
