@@ -115,30 +115,30 @@ pipeline {
                  when {
                     expression { "$params.DEPLOY" == "true"}
             }
-                     input {
-                    message "Should we continue?"
-                    ok "Yes, we should."
-                    submitter "alice,bob"
-                    parameters {
-                        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-                    }
-                        }
+                    //  input {
+                    // message "Should we continue?"
+                    // ok "Yes, we should."
+                    // submitter "alice,bob"
+                    // parameters {
+                    //     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                    // }
+                    //     }
             steps {
                 script {
                     sh """
                     echo "Building"
-                    echo role: ${ROLE}
-                     echo "Hello ${params.PERSON}"
+                    // echo role: ${ROLE}
+                    //  echo "Hello ${params.PERSON}"
 
-                    echo "Biography: ${params.BIOGRAPHY}"
+                    // echo "Biography: ${params.BIOGRAPHY}"
 
-                    echo "Toggle: ${params.DEPLOY}"
+                    // echo "Toggle: ${params.DEPLOY}"
 
-                    echo "Choice: ${params.CHOICE}"
+                    // echo "Choice: ${params.CHOICE}"
 
-                    echo "Password: ${params.PASSWORD}"
+                    // echo "Password: ${params.PASSWORD}"
 
-                    // sleep 10
+                    // // sleep 10
                     """
                 }
             }
