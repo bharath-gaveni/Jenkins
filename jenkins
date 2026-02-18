@@ -1,16 +1,3 @@
-// pipeline {
-//     agent any
-//     stages {
-//         stage('Example') {
-//             steps {
-//                 echo 'Hello World'
-//             }
-//         }
-//     }
-// }
-
-
-
 pipeline {
 
     agent {
@@ -32,10 +19,10 @@ pipeline {
         }
         //second stage
         stage('Test') {
-            steps {
+             steps {
                 script {
-                sh  """
-                    echo "Building"
+                    sh """
+                    echo "Testing"
                     """
                 }
             }
