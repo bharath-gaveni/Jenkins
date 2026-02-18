@@ -138,7 +138,7 @@ pipeline {
 
                     echo "Password: ${params.PASSWORD}"
 
-                    sleep 10
+                    // sleep 10
                     """
                 }
             }
@@ -156,8 +156,8 @@ pipeline {
             failure {
                 echo 'failure'
             }
-            aborted {
-                echo 'pipeline is taking time then expected please check'
-            }
+            // aborted {
+            //     echo 'pipeline is taking time then expected please check'
+            // }
         }
 }
