@@ -68,6 +68,10 @@ pipeline {
         ROLE = "AWS DevSecOps Engineer"
     }
 
+    options {
+        timeout(time: 10, unit: 'SECONDS')
+    }
+
     stages {
         //first stage
         stage('Build') {
@@ -99,6 +103,7 @@ pipeline {
                     sh """
                     echo "Building"
                     echo role: ${ROLE}
+                    sleep 11
                     """
                 }
             }
@@ -115,6 +120,9 @@ pipeline {
 
             failure {
                 echo 'failure'
+            }
+            aborted {
+                echo 'pipeline is taking time then expected please check'
             }
         }
 }
