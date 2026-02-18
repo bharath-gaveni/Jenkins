@@ -41,7 +41,7 @@ pipeline {
     }
         post {
             always {
-                'I will run irrespective of if pipeline is success or failure'
+               echo 'I will run irrespective of if pipeline is success or failure'
             }
         }
 }
