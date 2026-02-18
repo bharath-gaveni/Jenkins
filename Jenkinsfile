@@ -76,6 +76,7 @@ pipeline {
                     sh """
                     echo "Building"
                     echo role: ${ROLE}
+                    env
                     """
                 }
             }
