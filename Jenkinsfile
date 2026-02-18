@@ -64,6 +64,10 @@ pipeline {
         }
     }
 
+    environment {
+        ROLE: "AWS DevSecOps Engineer"
+    }
+
     stages {
         //first stage
         stage('Build') {
@@ -71,6 +75,7 @@ pipeline {
                 script {
                     sh """
                     echo "Building"
+                    echo role: ${ROLE}
                     """
                 }
             }
@@ -81,6 +86,7 @@ pipeline {
                 script {
                     sh """
                     echo "Testing"
+                    echo role: ${ROLE}
                     """
                 }
             }
@@ -91,6 +97,7 @@ pipeline {
                 script {
                     sh """
                     echo "Building"
+                    echo role: ${ROLE}
                     """
                 }
             }
