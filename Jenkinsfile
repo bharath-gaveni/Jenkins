@@ -104,7 +104,7 @@ pipeline {
                     sh """
                     echo "Building"
                     echo role: ${ROLE}
-                    sleep 11
+                    sleep 10
                     """
                 }
             }
