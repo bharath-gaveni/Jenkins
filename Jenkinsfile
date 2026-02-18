@@ -123,7 +123,6 @@ pipeline {
                     //     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
                     // }
                     //     
-        }
             steps {
                 script {
                     sh """
@@ -144,7 +143,7 @@ pipeline {
                 }
             }
         }
-    }
+}
         post {
             always {
                echo 'I will run irrespective of if pipeline is success or failure'
@@ -161,4 +160,5 @@ pipeline {
             //     echo 'pipeline is taking time then expected please check'
             // }
         }
-}
+        }
+
