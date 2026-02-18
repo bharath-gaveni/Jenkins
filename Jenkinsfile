@@ -21,21 +21,21 @@ pipeline {
 
     stages {
         //first stage
-        stage('first stage') {
+        stage('Build') {
             steps {
-                echo "jenkins first stage"
+                echo "Building"
             }
         }
         //second stage
-        stage('second stage') {
+        stage('Test') {
             steps {
-                echo "jenkins second stage"
+                echo "Testing"
             }
         }
         //third stage
-        stage('third stage') {
+        stage('Deploy') {
             steps {
-                echo "jenkins third stage"
+                echo "Deploying"
             }
         }
     }
