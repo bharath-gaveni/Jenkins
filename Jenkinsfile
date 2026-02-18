@@ -42,6 +42,14 @@ pipeline {
         post {
             always {
                echo 'I will run irrespective of if pipeline is success or failure'
+               cleanWS()
+            }
+            success {
+                echo 'success'
+            }
+
+            failure {
+                echo 'failure'
             }
         }
 }
