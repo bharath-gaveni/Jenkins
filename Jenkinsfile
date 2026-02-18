@@ -38,11 +38,10 @@ pipeline {
                 echo "Deploying"
             }
         }
+    }
         post {
             always {
                 'I will run irrespective of if pipeline is success or failure'
             }
         }
-    }
-
 }
