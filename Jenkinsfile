@@ -65,7 +65,7 @@ pipeline {
     }
 
     environment {
-        ROLE: "AWS DevSecOps Engineer"
+        ROLE = "AWS DevSecOps Engineer"
     }
 
     stages {
